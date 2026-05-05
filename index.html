@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/all.min.css">
     <style>
         :root {
-            /* نظام ألوان جديد وفخم: أرجواني عميق وذهبي وردي */
-            --accent-color: #d4a5ff; /* أرجواني فاتح للأسعار */
-            --primary-gold: #ffb7c5; /* ذهبي وردي للعناوين */
-            --deep-bg: #0b021a; /* أسود أرجواني عميق للخلفية */
+            --accent-color: #d4a5ff; 
+            --primary-gold: #ffb7c5; 
+            --deep-bg: #0b021a; 
             --glass-purple: rgba(58, 12, 107, 0.4); 
             --neon-glow: 0 0 25px rgba(186, 104, 200, 0.5);
             --text-main: #ffffff;
@@ -23,7 +22,6 @@
             color: var(--text-main); 
             overflow-x: hidden; 
             line-height: 1.8;
-            text-align: right;
         }
 
         /* ===== Hero Section ===== */
@@ -38,7 +36,6 @@
             border-bottom: 3px solid var(--primary-gold);
         }
 
-        /* فقاعات متحركة خلف الشعار */
         .bubbles-container { position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; }
         .bubble {
             position: absolute;
@@ -49,16 +46,12 @@
             border-radius: 15px;
             padding: 10px 18px;
             color: #fff;
-            font-weight: bold;
-            box-shadow: var(--neon-glow); 
             animation: floatUp 10s infinite linear;
-            white-space: nowrap;
         }
 
         @keyframes floatUp {
             0% { transform: translateY(0) rotate(0deg); opacity: 0; }
             10% { opacity: 0.8; }
-            90% { opacity: 0.8; }
             100% { transform: translateY(-115vh) rotate(-15deg); opacity: 0; }
         }
 
@@ -72,12 +65,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
             background: #000;
             box-shadow: 0 0 50px rgba(212, 165, 255, 0.3);
             margin: 0 auto;
         }
-        .logo-top { font-size: 24px; font-weight: 900; color: #fff; letter-spacing: 3px; }
+        .logo-top { font-size: 24px; font-weight: 900; letter-spacing: 3px; }
         .logo-mid {
             background: var(--primary-gold);
             color: #000;
@@ -91,35 +83,31 @@
 
         /* ===== Layout ===== */
         .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        .section-title { text-align: center; color: var(--primary-gold); margin: 60px 0 40px; font-size: 2.5rem; text-shadow: 0 0 10px rgba(255,183,197,0.3); }
+        .section-title { text-align: center; color: var(--primary-gold); margin: 60px 0 30px; font-size: 2.2rem; }
 
-        /* ===== Cards ===== */
-        .grid { display: grid; gap: 25px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+        /* ===== Grid Cards ===== */
+        .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
         .card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(212, 165, 255, 0.1);
-            padding: 35px 20px;
+            padding: 30px 15px;
             border-radius: 20px;
             text-align: center;
             transition: 0.3s;
         }
-        .card:hover { 
-            border-color: var(--primary-gold); 
-            transform: translateY(-8px); 
-            background: rgba(212, 165, 255, 0.08); 
-        }
-        .price { font-size: 40px; color: var(--accent-color); font-weight: 900; margin: 10px 0; }
+        .card:hover { border-color: var(--primary-gold); transform: translateY(-5px); }
+        .price { font-size: 38px; color: var(--accent-color); font-weight: 900; margin: 10px 0; }
 
-        /* ===== Info Panels ===== */
+        /* ===== Panels ===== */
         .detail-panel {
             background: rgba(20, 5, 40, 0.6);
             border-right: 5px solid var(--accent-color);
             padding: 25px;
             border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(212, 165, 255, 0.05);
+            margin-bottom: 25px;
+            border: 1px solid rgba(212, 165, 255, 0.1);
         }
-        .detail-panel h4 { color: var(--primary-gold); margin-bottom: 12px; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
+        .detail-panel h4 { color: var(--primary-gold); margin-bottom: 15px; font-size: 1.4rem; display: flex; align-items: center; gap: 12px; }
         
         .badge { 
             background: #2a0a4d; 
@@ -128,132 +116,113 @@
             border-radius: 6px; 
             border: 1px solid var(--accent-color); 
             font-family: monospace;
-            font-size: 1.1rem;
         }
 
         .download-btn {
             display: inline-block;
             background: var(--primary-gold);
             color: #000;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 15px;
             transition: 0.3s;
         }
         .download-btn:hover { background: #fff; transform: scale(1.05); }
 
-        /* ===== Action Buttons ===== */
         .btn-action {
             background: linear-gradient(45deg, #8e2de2, #4a00e0);
             color: #fff !important;
-            padding: 22px 55px;
+            padding: 20px 50px;
             border-radius: 60px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 15px;
             font-weight: bold;
-            font-size: 1.4rem;
-            margin-top: 40px;
-            box-shadow: 0 10px 30px rgba(74, 0, 224, 0.5);
-            transition: 0.3s;
+            font-size: 1.3rem;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(74, 0, 224, 0.4);
         }
-        .btn-action:hover { transform: scale(1.05); filter: brightness(1.2); }
 
-        footer { text-align: center; padding: 60px 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 60px; }
-        .status-dot { color: #00ff88; animation: blink 1.5s infinite; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <section class="hero">
     <div class="bubbles-container" id="bubbles"></div>
-
     <div style="text-align: center; z-index: 10;">
         <div class="digital-logo">
             <div class="logo-top">BEST</div>
             <div class="logo-mid">4K</div>
             <div class="logo-bottom">ULTRA HD</div>
         </div>
-        <h1 style="margin-top:25px; font-size: 3.2rem;">BEST 4K IRAQ</h1>
-        <p style="color: var(--accent-color); font-size: 1.4rem; font-weight: bold; letter-spacing: 1px;">الموزع الرسمي المعتمد في العراق 🇮🇶</p>
-        <p style="margin-top: 15px;"><span class="status-dot">●</span> السيرفر متصل وتعمل جميع القنوات بكفاءة</p>
+        <h1 style="margin-top:25px; font-size: 2.8rem;">BEST 4K IRAQ</h1>
+        <p style="color: var(--accent-color); font-size: 1.3rem; font-weight: bold;">الوكيل الرسمي المعتمد لخدمات البث في العراق 🇮🇶</p>
     </div>
 </section>
 
 <div class="container">
     
-    <h2 class="section-title">خطط الاشتراك الرسمية</h2>
+    <h2 class="section-title">لماذا تختار سيرفر BEST 4K؟</h2>
+    <div class="detail-panel">
+        <h4><i class="fas fa-layer-group"></i> تفاصيل المحتوى الضخم</h4>
+        <p>• أكثر من <strong>12,000 قناة مباشرة</strong> بجودات متعددة (4K - FHD - HD - SD).</p>
+        <p>• مكتبة أفلام ومسلسلات ضخمة (VOD) تضم أحدث إصدارات <strong>Netflix, Shahid, OSN</strong> وتحدث يومياً.</p>
+        <p>• قنوات رياضية حصرية مع توفر عدة مصادر للبث لضمان عدم الانقطاع أثناء المباريات.</p>
+        <p>• دعم فني مستمر وتحديثات دورية للسيرفر لضمان أعلى استقرار.</p>
+    </div>
+
+    <div class="detail-panel" style="border-right-color: #ffb7c5;">
+        <h4><i class="fas fa-wifi"></i> متطلبات الاتصال بالإنترنت</h4>
+        <p>لضمان مشاهدة ممتعة وبدون "تعليق" خاصة عند تشغيل جودة الـ 4K، ننصح بالآتي:</p>
+        <p>• <strong>نوع الإنترنت:</strong> يفضل استخدام إنترنت <strong>الألياف الضوئية (Fiber Optic)</strong> لضمان استقرار الـ Ping.</p>
+        <p>• <strong>السرعة المطلوبة:</strong> سرعة لا تقل عن <strong>20 ميجابايت</strong> فعليّة للمشاهدة المستقرة.</p>
+        <p>• <strong>ملاحظة:</strong> يفضل ربط الجهاز (الشاشة أو التي في بوكس) عبر <strong>كابل LAN</strong> بدلاً من الواي فاي لضمان أداء ثابت.</p>
+    </div>
+
+    <h2 class="section-title">أسعار الاشتراكات</h2>
     <div class="grid">
-        <div class="card">
-            <h3>اشتراك شهر</h3>
-            <div class="price">7,000 <small style="font-size: 14px;">IQD</small></div>
-            <p>تجربة المحتوى بالكامل</p>
-        </div>
-        <div class="card" style="border: 2px solid var(--primary-gold);">
-            <div style="color: var(--primary-gold); font-size: 0.8rem; margin-bottom: 5px;">الأكثر طلباً ⭐</div>
-            <h3>اشتراك 3 أشهر</h3>
-            <div class="price">12,000 <small style="font-size: 14px;">IQD</small></div>
-            <p>توفير مثالي للمشاهدة</p>
-        </div>
-        <div class="card">
-            <h3>اشتراك 6 أشهر</h3>
-            <div class="price">20,000 <small style="font-size: 14px;">IQD</small></div>
-            <p>ضمان استقرار طويل المدى</p>
-        </div>
-        <div class="card">
-            <h3>اشتراك سنة</h3>
-            <div class="price">30,000 <small style="font-size: 14px;">IQD</small></div>
-            <p>القيمة الأفضل للتوفير</p>
-        </div>
+        <div class="card"><h3>شهر واحد</h3><div class="price">7,000 <small>IQD</small></div></div>
+        <div class="card" style="border: 2px solid var(--primary-gold);"><h3>3 أشهر</h3><div class="price">12,000 <small>IQD</small></div></div>
+        <div class="card"><h3>6 أشهر</h3><div class="price">20,000 <small>IQD</small></div></div>
+        <div class="card"><h3>سنة كاملة</h3><div class="price">30,000 <small>IQD</small></div></div>
     </div>
 
     <div style="text-align: center;">
         <a href="https://wa.me/9647706746733" class="btn-action">
-            <i class="fab fa-whatsapp"></i> اشترك الآن أو اطلب تجربة مجانية
+            <i class="fab fa-whatsapp"></i> تواصل معنا لتفعيل الاشتراك: 07706746733
         </a>
     </div>
 
-    <h2 class="section-title">دليل التحميل والتشغيل</h2>
-    
+    <h2 class="section-title">روابط التحميل المباشر</h2>
     <div class="detail-panel">
-        <h4><i class="fab fa-android"></i> أجهزة الأندرويد والشاشات الذكية</h4>
-        <p>• <strong>التحميل المباشر:</strong> اضغط هنا لتحميل ملف التطبيق <br> 
-           <a href="https://sh-apps.cyou/apk/BEST4K.apk" class="download-btn"><i class="fas fa-download"></i> تحميل تطبيق BEST 4K APK</a>
-        </p>
-        <p style="margin-top: 15px;">• <strong>عن طريق تطبيق Downloader:</strong> استخدم الكود <span class="badge">4056700</span></p>
+        <h4><i class="fab fa-android"></i> أجهزة الأندرويد والشاشات</h4>
+        <p>حمل التطبيق الرسمي مباشرة عبر الرابط التالي:</p>
+        <a href="https://sh-apps.cyou/apk/BEST4K.apk" class="download-btn"><i class="fas fa-download"></i> تحميل تطبيق BEST 4K (APK)</a>
+        <p style="margin-top: 15px;">أو استخدم الكود في تطبيق Downloader: <span class="badge">4056700</span></p>
     </div>
 
     <div class="detail-panel">
-        <h4><i class="fab fa-apple"></i> أجهزة الآيفون و Apple TV</h4>
-        <p>• حمل تطبيق <strong>NEXT+</strong> أو <strong>CASTORA</strong> من المتجر.</p>
-        <p>• كود تفعيل السيرفر داخل التطبيق: <span class="badge">4949</span></p>
-        <p>• بيانات الهوست (Host): <span style="color: var(--accent-color); font-family: monospace;">http://39kent-cdn.streamcorex.net:8080</span></p>
-    </div>
-
-    <div class="detail-panel">
-        <h4><i class="fas fa-headset"></i> الدعم الفني والمبيعات</h4>
-        <p>لأي استفسار أو تفعيل الاشتراك، تواصل معنا مباشرة عبر واتساب:</p>
-        <p style="font-size: 1.8rem; color: var(--primary-gold); font-weight: bold; margin-top: 10px;">07706746733</p>
+        <h4><i class="fab fa-apple"></i> أجهزة الآيفون والـ Apple TV</h4>
+        <p>استخدم تطبيق <strong>NEXT+</strong> بكود تفعيل السيرفر: <span class="badge">4949</span></p>
+        <p>رابط الهوست: <span style="color: var(--accent-color);">http://39kent-cdn.streamcorex.net:8080</span></p>
     </div>
 
 </div>
 
 <footer>
-    <p style="color: var(--primary-gold); font-weight: bold; font-size: 1.3rem;">BEST 4K OFFICIAL - IRAQ</p>
-    <p style="color: #666; margin-top: 15px;">جميع الحقوق محفوظة © 2026</p>
-    <p style="color: #444; font-size: 0.9rem;">خدمة العملاء: 07706746733</p>
+    <p style="color: var(--primary-gold); font-weight: bold; font-size: 1.2rem;">BEST 4K OFFICIAL IRAQ</p>
+    <p style="color: #888; margin-top: 10px;">جميع الحقوق محفوظة © 2026</p>
+    <p style="color: #666;">خدمة العملاء: 07706746733</p>
 </footer>
 
 <script>
     const container = document.getElementById('bubbles');
-    const items = ['beIN SPORTS', 'NETFLIX', 'SHAHID VIP', 'BEST 4K', 'OSN', 'HBO', 'ULTRA HD'];
-
-    for (let i = 0; i < 16; i++) {
+    const items = ['beIN SPORTS', 'NETFLIX', 'SHAHID VIP', 'BEST 4K', '4K HDR', 'FIBER OPTIC'];
+    for (let i = 0; i < 15; i++) {
         const item = items[Math.floor(Math.random() * items.length)];
         const bubble = document.createElement('div');
         bubble.className = 'bubble';
